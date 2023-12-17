@@ -38,7 +38,7 @@ namespace Web_Scraper
                         ScrapeEbay();
                         break;
                     case "4":
-                        Console.WriteLine("exit");
+                        Environment.Exit(0);
                         break;
                     default:
                         Console.WriteLine("Invalid option, please try again.");
@@ -133,7 +133,7 @@ namespace Web_Scraper
             // Asking for the file name
             Console.WriteLine("Please enter the filename (without extension):");
             string fileName = Console.ReadLine();
-            string fullPath = Path.Combine(homeDirectory, fileName);
+            string fullPath = Path.Combine(saveDirectory, fileName);
             Console.WriteLine("\n Please select the file format to save the data:");
             Console.WriteLine("1. CSV");
             Console.WriteLine("2. JSON");
